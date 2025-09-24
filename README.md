@@ -17,24 +17,23 @@ personal-assistant/
 ├── data/               # Personal knowledge base (markdown files)
 │   ├── personal_info.md
 │   ├── resume.md
-│   └── fun_facts.md
 ├── scripts/
 │   └── build_db.py     # build Chroma DB from markdown
 ├── chroma_db/          # generated vector DB (ignored in git)
-├── frontend/ (or app/) # Next.js frontend
+├── frontend code # Next.js frontend
 └── README.md
 ```
 
 ## Setup
-1. Clone the repo
+**1. Clone the repo**
 
 ```
 git clone https://github.com/your-username/personal-assistant.git
 cd personal-assistant
 ```
 
-2. Install Dependencies
-** Backend **
+**2. Install Dependencies**
+
 ```
 python -m venv .venv
 source .venv/bin/activate   # Mac/Linux
@@ -43,12 +42,12 @@ source .venv/bin/activate   # Mac/Linux
 pip install -r requirements.txt
 ```
 
-** Frontend **
 ```
 npm install
 ```
 
-3. Environment variables
+**3. Environment variables**
+
 Create `.env.local` in project root:
 
 ```
@@ -56,13 +55,13 @@ OPENAI_API_KEY=sk-your-openai-key
 ```
 
 ## Usage
-1. Build Vector DB
+**1. Build Vector DB**
 
 Whenever you update `data/*.md`, rebuild embeddings:
 ```
 python scripts/build_db.py
 ```
-2. Run Frontend & Backend Concurrently
+**2. Run Frontend & Backend Concurrently**
 ```
 npm run dev
 ```
