@@ -35,6 +35,7 @@ export function Chat() {
     setInput("");
     setIsLoading(true);
 
+    // calling backend chat API
     try {
       const res = await fetch("http://localhost:8000/api/chat", {
         method: "POST",
