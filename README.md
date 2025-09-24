@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Assistant Chatbot
+A full-stack chatbot that answers questions about ME! (Siwan) using **Next.js (frontend), FastAPI (backend), and LangChain + Chroma (RAG with Markdown data)**.
 
-## Getting Started
+## Features
+* Chat UI built with Next.js + React
+* Real-time Streaming responses
+* FastAPI backend connected to Ollama LLM (Model: Gemma3)
+* RAG: Chatbot answers based on markdown files 
+* Fast semantic vector search
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Structure
+```
+personal-assistant/
+├── api/                # FastAPI backend
+│   ├── index.py        # /api/chat endpoint
+│   └── config.py       # CORS setup
+├── data/               # Personal knowledge base (markdown files)
+│   ├── personal_info.md
+│   ├── resume.md
+│   └── fun_facts.md
+├── scripts/
+│   └── build_db.py     # build Chroma DB from markdown
+├── chroma_db/          # generated vector DB (ignored in git)
+├── frontend/ (or app/) # Next.js frontend
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup
+1. Clone the repo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+git clone https://github.com/your-username/personal-assistant.git
+cd personal-assistant
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Install Dependencies
+** Backend **
+```
+python -m venv .venv
+source .venv/bin/activate   # Mac/Linux
+.venv\Scripts\activate      # Windows
 
-## Learn More
+pip install -r requirements.txt
+```
 
-To learn more about Next.js, take a look at the following resources:
+** Frontend **
+```
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Environment variables
+Create `.env.local` in project root:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+OPENAI_API_KEY=sk-your-openai-key
+```
 
-## Deploy on Vercel
+## Usage
+1. Build Vector DB
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Whenever you update `data/*.md`, rebuild embeddings:
+```
+python scripts/build_db.py
+```
+2. Run Frontend & Backend Concurrently
+```
+npm run dev
+```
