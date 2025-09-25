@@ -17,6 +17,7 @@ personal-assistant/
 ├── data/               # Personal knowledge base (markdown files)
 │   ├── personal_info.md
 │   ├── resume.md
+|   └── extra_info.md
 ├── scripts/
 │   └── build_db.py     # build Chroma DB from markdown
 ├── chroma_db/          # generated vector DB (ignored in git)
@@ -55,13 +56,8 @@ OPENAI_API_KEY=sk-your-openai-key
 ```
 
 ## Usage
-**1. Build Vector DB**
 
-Whenever you update `data/*.md`, rebuild embeddings:
-```
-python scripts/build_db.py
-```
-**2. Run Frontend & Backend Concurrently**
+**Run Frontend & Backend Concurrently & Rebuild the vector database**
 ```
 npm run dev
 ```
