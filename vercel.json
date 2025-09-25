@@ -3,13 +3,5 @@
     "api/index.py": {
       "runtime": "python3.11"
     }
-  },
-  "ignoreFiles": [
-    ".venv/**",
-    "node_modules/**",
-    "chroma_db/**",
-    "scripts/**",
-    "__pycache__/**",
-    "*.log"
-  ]
+  }
 }
