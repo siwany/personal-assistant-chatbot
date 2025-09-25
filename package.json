@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"next dev --turbopack\" \"uvicorn api.index:app --reload --port 8000\"",
+    "dev": "npm run db && concurrently \"next dev --turbopack\" \"uvicorn api.index:app --reload --port 8000\"",
     "build": "next build --turbopack",
+    "db": "python scripts/build_db.py",
     "start": "next start",
     "lint": "eslint"
   },

@@ -17,14 +17,13 @@ def build_vector_db():
     """
     docs = []
     # Create directories if they don't exist
-    os.makedirs(DATA_DIR, exist_ok=True)
     os.makedirs(CHROMA_DIR, exist_ok=True)
 
     # Load documents
     for file in os.listdir(DATA_DIR):
         if file.endswith(".md"):
             loader = UnstructuredMarkdownLoader(os.path.join(DATA_DIR, file))
-            docs.extend(loader.load())
+            docs.extend([d.metadata.update({"source": file}) or d for d in loader.load()])
 
     # Split documents into chunks
     splitter = RecursiveCharacterTextSplitter(chunk_size=500, 
@@ -36,7 +35,11 @@ def build_vector_db():
     embeddings = OpenAIEmbeddings(model="text-embedding-3-large",)
 
     # Build Vector DB
-    vectordb = Chroma.from_documents(documents=chunks, embedding=embeddings, persist_directory=CHROMA_DIR)
+    vectordb = Chroma.from_documents(
+        documents=chunks, 
+        embedding=embeddings, 
+        persist_directory=CHROMA_DIR
+        )
     print(f"Built vector DB with {len(chunks)} chunks, stored in {CHROMA_DIR}")
 
 if __name__ == "__main__":
