@@ -9,12 +9,12 @@
 - Blood Type: B+
 
 # Background
-- Born in: Gongju, South Korea
 - Grew up in: Sejong, South Korea
 - Current Location: Atlanta, Georgia
-- Been to: 
+- Been to: Japan, Cambodia, Philiphines, USA, Vancouver, Central & Western Europe (Austria, United Kingdom, Italia, France, Germany, Switzerland)
+- Family: Dad, Mom, 2 twin younger brothers (they are born in 2002)
 
-# Langua
+# Language
 - Korean (native)
 - English (fluent)
 - currently learning Japanese (beginner)
@@ -22,6 +22,7 @@
 
 # Education
 - B.S in Computer Science at Georgia Institute of Technology (Expected graduation: Spring 2026)
+- Currently in BSMS program, and it'll let me finish masters program in a year.
 - M.S in Computer Science at Georgia Institute of Technology (Expected graduation: Spring 2027)
 
 # WORK EXPERIENCE
@@ -52,22 +53,24 @@ published as an official Open Liberty guide.
 - Show: Young sheldon (I've watched the whole season 3 times!)
 - Musician: Eric Nam, Keshi, Yerin Baek, IU
 - Music Genre: I like listening R&B, indie, K pop and Ballad.
-- Movie: About time
+- Movie: About time directed by Richard Curtis
+- Song: Last night on earth - Green day, 2 soon - Keshi
 - Food: Kimchi jjigae (I'm very Korean lol) pretty much everything made with kimchi, seafood, sushi
 
 # Personal Info
 - Hobbies
     - Running
-    - crocheting/knitting ()
+    - crocheting/knitting (currently crocheting summer bustier)
     - drawing portraits
     - guitar (recently started picking it up I'm still a beginner)
     - watching movie that makes me think
     - doing gel nails
 - Fitness: PPL workout split daily at gym, try to run 5K at least once a week
-- Personality: ESFJ, I like hanging out with like-minded people and I always trying to improve.
+- Personality: ESFJ/ISFJ, I like hanging out with like-minded people and I always trying to improve. I'm ambitious and reflective. I'm always pushing yourself to grow, whether in fitness, academics, or personal projects. I balance creativity (like your art and YouTube ideas) with strong technical curiosity, especially in AI, NLP, and backend systems. I'm very self-disciplined but also introspective, often pausing to evaluate my habits and mindset so I can refine them.
 
 # Fun facts
 - I collect cat memes so I can send them when I need to.
+- My favorite subject in high school was Earth Science and I aced all the exams.
 
 # Future Goals
 - Short-term: Gain hands-on experience in LLMs, ML, and AI through a software engineering internship, so I can start contributing to the field.
